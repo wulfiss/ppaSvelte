@@ -1,6 +1,8 @@
 <script lang="ts">
     import { Table, TableBody, TableBodyCell, TableBodyRow, TableHead, TableHeadCell, TableSearch } from 'flowbite-svelte';
-	
+	import FormAddCl from './FormAddChlorine.svelte';
+	import FormAddChlorine from './FormAddChlorine.svelte';
+
     let searchTerm = '';
     let items = [
       { id: 1, maker: 'Toyota', type: 'ABC', make: 2017 },
@@ -18,7 +20,7 @@
   </script>
   
   <TableSearch placeholder="Search by maker name" hoverable={true} bind:inputValue={searchTerm}>
-    <TableHead>
+      <TableHead>
       <TableHeadCell>ID</TableHeadCell>
       <TableHeadCell>Maker</TableHeadCell>
       <TableHeadCell>Type</TableHeadCell>
@@ -35,3 +37,5 @@
       {/each}
     </TableBody>
   </TableSearch>
+
+  <FormAddChlorine />
